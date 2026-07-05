@@ -3,8 +3,12 @@ import pickle
 import numpy as np
 
 # Load Model and Scaler
-model = pickle.load(open("model.pkl", "rb"))
+#model = pickle.load(open("model.pkl", "rb"))
 #sc = pickle.load(open("sc.pkl", "rb"))
+from joblib import load
+
+model = load("model.joblib")
+
 
 # Page Configuration
 st.set_page_config(
